@@ -1,2 +1,53 @@
-Hello. This is an index file
-changed
+<!doctype html>
+<html>
+<head>
+	<title> Html Css and JS Assignment</title>
+	<style>
+		body{
+			background-color: gray;
+			padding:30px;
+		}
+		.info{
+			background-color:black;
+			color: white;
+			padding: 20px;
+			float: left;
+		}
+		#form > label, input, button {
+			margin: 5px;
+		}
+		#form {
+			padding:20px;
+			background-color:white;
+			float: left;
+		}
+		#clear{
+			clear: both;
+		}
+		#work {
+			background-color:#4286f4;
+		}
+	</style>
+	<script>
+		function add(){
+			var num1,num2,sum;
+			num1 = Number(document.getElementById("first_num").value);
+			num2 = Number(document.getElementById("second_num").value);
+			sum = num1 + num2;
+			document.getElementById("addition").value= sum;
+		}
+	</script>
+</head>
+<body>
+	<p class="info">
+		Provide two numbers and click Add to get sum.
+	</p>
+	<div style="clear:left;"></div>
+	<div id="form">
+		<label for="first_num"> First number: </label> <input type="number" id="first_num"/><br/>
+		<label for="second_num"> Second number: </label> <input type="number" id="second_num"/><br/>
+		<button onclick="add()"> Add </button><br/>
+		<label for="addition"> Answer: </label> <input id="addition"/> <br/>
+	</div>
+</body>
+</html>
